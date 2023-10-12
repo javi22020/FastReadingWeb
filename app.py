@@ -14,6 +14,6 @@ with gr.Blocks(
                 label_texto = gr.Label(value=texto.value)
                 velocidad = gr.Slider(minimum=1, maximum=100, step=1, interactive=True, label="Velocidad (palabras por minuto)")
                 leer = gr.Button(value="Comenzar")
-                leer.click(iniciar_lectura, inputs=[label_texto, texto, velocidad])
+                leer.click(fn=lectura, inputs=[label_texto])
 
 webapp.launch()
